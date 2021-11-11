@@ -14,11 +14,7 @@ pipeline {
 
     stages { 
         
-        stage('email'){
-			steps{
-			mail bcc: '', body: 'build_success', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'aymen.melki@esprit.tn'
-			}
-		}
+        
         
         
         
@@ -133,6 +129,13 @@ pipeline {
 
             }
         } 
+	    
+	    
+       stage('email'){
+			steps{
+			mail bcc: '', body: 'build_success', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'aymen.melki@esprit.tn'
+			}
+		}	    
        
     }
 
