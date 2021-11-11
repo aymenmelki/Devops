@@ -131,11 +131,15 @@ pipeline {
         } 
 	    
 	    
-       stage('email'){
-			steps{
-			mail bcc: '', body: 'chaine complete', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'aymen.melki@esprit.tn'
-			}
-		}	    
+   post {
+        success {
+            emailext body: 'build success', subject: 'jenkins',to: 'aymen.melki@esprit.tn'
+        }
+    failure {
+    emailext body: 'build failure', subject: 'jenkins',to: 'aymen.melki@esprit.tn'
+    }
+ 
+}    
        
     }
 
