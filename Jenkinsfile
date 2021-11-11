@@ -19,7 +19,7 @@ pipeline {
                        steps{
                           echo 'Pulling ... ';
                               git branch:  'main' ,
-                              url :'https://github.com/aymenmelki/Timesheet'
+                              url :'https://github.com/aymenmelki/Devops'
                               }
                     }
 
