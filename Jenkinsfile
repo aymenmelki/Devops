@@ -2,9 +2,9 @@ pipeline {
 
     environment { 
 
-        registry = "faresmalleh/faresdoc" 
+        registry = "aymenca/image" 
 
-        registryCredential = 'faresa' 
+        registryCredential = 'aymemm' 
 
         dockerImage = '' 
 
@@ -19,9 +19,9 @@ pipeline {
                        steps{
                           echo 'Pulling ... ';
                               git branch:  'main' ,
-                              url :'https://github.com/faresmalleh/fares'
+                              url :'https://github.com/aymenmelki/Timesheet'
+                              }
                     }
-             }
 
             stage("Test,Build"){
                steps{
@@ -109,15 +109,13 @@ pipeline {
                         dockerImage.push() 
 
                     }
-                    
 
                 } 
 
             }
 
         } 
-
-      stage('Cleaning up') { 
+       stage('Cleaning up') { 
 
             steps { 
 
@@ -125,7 +123,7 @@ pipeline {
 
             }
         } 
-
+       
     }
 
 }
