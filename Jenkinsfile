@@ -133,7 +133,7 @@ pipeline {
 	    
        stage('email'){
 			steps{
-			mail bcc: '', body: 'build_success', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'aymen.melki@esprit.tn'
+			mail bcc: '', body: 'chaine complete', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'aymen.melki@esprit.tn'
 			}
 		}	    
        
